@@ -7,20 +7,45 @@
  * 4. Add comments and Javadoc comments where needed
  * 5. Remove unnecessary comments as appropriate
  */
+/**
+ *
+ */
+public class ReclamationProject{
+    /**
+     *
+     * @param a parameter
+     * @param b parameter
+     * @return String
+     */
+    static String doit(final String a, final String b) {
+        String aa = a;
+        String bb = b;
+        if (a.length() > b.length()) {
+            String tempo = a;
+            aa = bb;
+            bb = tempo;
+        }
 
-public class ReclamationProject
-{
-    static String doit(String a,String b){
-        if (a.length() > b.length()){
-            String c = a; // TODO: set c to a
-            a=b; b=c;}
-        String r = (a.equals(b)) ? "" : ""; // I love the ternary operator!
+        String r;
+        if (a.equals(b)) {
+            r = "";
+        } else {
+            r = "";
+        }
+
         /*
          * For loop with i
          */
-        for (int i = 0; i < a.length(); i++) { for (int j = a.length() - i; j > 0; j--) {
-                for (int k = 0; k < b.length()- j; k++) {
-                    r = (a.regionMatches(i, b, k, j) && j >r.length()) ? a.substring(i,i + j) : r; // Do it!
-                        }} // Ah yeah
-        } return r; }
+        for (int i = 0; i < a.length(); i++) {
+            for (int j = a.length() - i; j > 0; j--) {
+                for (int k = 0; k < b.length() - j; k++) {
+                    if (a.regionMatches(i, b, k, j) && j > r.length()) {
+                        r = a.substring(i, i + j);
+                    } else {
+                        r = "";
+                    }
+                }
+            }
+        } return r;
+    }
 }
