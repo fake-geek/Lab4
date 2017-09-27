@@ -20,17 +20,17 @@ public class ReclamationProject{
     static String doit(final String a, final String b) {
         String aa = a;
         String bb = b;
-        if (a.length() > b.length()) {
-            String tempo = a;
+        if (aa.length() > bb.length()) {
+            String tempo = aa;
             aa = bb;
             bb = tempo;
         }
 
         String r;
-        if (a.equals(b)) {
-            r = "";
+        if (aa.equals(bb)) {
+            r = aa;
         } else {
-            r = "";
+            r = aa;
         }
 
         /*
